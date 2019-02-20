@@ -1,0 +1,106 @@
+ <article>
+
+<h5>crear usuario</h5>
+
+    <app-usuario-form></app-usuario-form>
+
+ <!--COMIENZO FORM NOT EDIT--><span *ngIf="!editar">
+
+    <div *ngIf="usuarios.length > 0">
+
+<h5>usuarios</h5>
+
+    <div class="table" [@listStagger]="usuarios$">
+ 
+         <div class="heading">
+ 
+             <div class="cell"><p>Nombre</p></div>
+ 
+             <div class="cell"><p>Correo</p></div>
+ 
+             <div class="cell"><p>Telefono</p></div>
+
+              <div class="cell"></div>
+      
+              <div class="cell"></div>             
+ 
+         </div>
+
+
+
+ 
+
+         <div class="row" *ngFor="let usu of usuarios | paginate: { itemsPerPage: 15, currentPage: p }">
+ 
+             <div class="cell"><p>{{ usu.name }}</p></div>
+ 
+             <div class="cell"><p>{{ usu.email }}</p></div>
+ 
+             <div class="cell"><p>{{usu.phone}}</p></div>
+             
+             <div class="cell"><button (click) ="borrarUsuario(usu)" name="borrar">
+                    <img src='/assets/img/borrarb.png'>borrar
+                    </button></div>
+
+             <div class="cell">
+                 <button (click)="editaUsuario($event, usu)" name="editar">
+                          <img src='/assets/img/editarb.png'> editar
+                         </button>
+             </div>
+ 
+         </div>
+ 
+
+
+
+
+     </div>
+
+
+</div>
+
+
+<div id ='paginacion'>
+<pagination-controls (pageChange)="p = $event" maxSize="9" directionLinks="false" autoHide="false" responsive="false" previousLabel="anterior" nextLabel="siguiente" screenReaderPaginationLabel="Pagination" screenReaderPageLabel="pagina" screenReaderCurrentLabel="estas en la pagina"></pagination-controls>
+</div>
+
+
+<!--FIN FORM NOT EDIT--></span>
+
+
+
+<!--NO HAY USUARIOS--><div *ngIf="usuarios.length < 0"> <h1>No hay Usuarios en el registro</h1> </div>
+
+<!--EDITANDO-->
+<span *ngIf="editar &&  editarUsuario.id == usu.id">
+
+    <form (ngSubmit)="updusuario(UsuarioModel)">
+      
+        <div class="Cell"><input type="text" name="name" [(ngModel)]=" editarUsuario.name"></div>
+   
+    
+        <div class="Cell"><input type="text" name="userType" [(ngModel)]=" editarUsuario.userType"></div>
+    
+     
+        <div class="Cell"><input type="email" name="email" [(ngModel)]=" editarUsuario.email"></div>
+   
+     
+        <div class="Cell"><input type="tel" name="phone" [(ngModel)]=" editarUsuario.phone"></div>
+     
+
+    </form>
+
+</span>
+<!--EDITANDO-->
+
+
+
+
+
+
+
+
+
+
+
+</article>

@@ -1,0 +1,79 @@
+
+/deep/ body{
+    background-image: url('/assets/img/good.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 10vw;
+    background-color:#ddd;
+}
+
+/deep/ aside,/deep/ header{
+    display:none!important;
+    visibility: hidden!important;
+}
+
+/deep/ section{
+    width: 100%;
+}
+
+form{
+    max-width:31vw;
+    padding:1.2vw;
+    color:#fff;
+    margin:0 auto 2vw auto;
+    margin-top:16vw;
+    background-color:#0f25d8;
+    border-radius:.5vw;border:solid .1vw;
+    border-color:rgba(238,238,238,.42)rgba(102,102,102,.57)rgba(102,102,102,.37)rgba(204,204,204,.51);
+    box-shadow:0 2px 2px rgba(0,0,0,0.2),0 1px 5px rgba(0,0,0,0.2),0 0 0 12px rgba(255,255,255,0.4)
+}
+form h6{
+    border-bottom:solid 1px #fff;
+    margin-bottom:1vw;
+    font-size: 1.5vw;
+}
+
+
+form input{
+    background:#fff;
+    font-size:1vw;
+    height:3vw;
+    margin-bottom:1vw;
+    width:13vw;
+    border-radius:.1vw;
+    -webkit-box-shadow: inset .2vw .2vw .2vw 0 #ccc;
+    -moz-box-shadow: inset .2vw .2vw .2vw 0 #ccc;
+    box-shadow: inset .2vw .2vw .2vw 0 #ccc;
+    padding-left:.3vw;display:inline-block;
+    border:1px solid #ccc
+}
+form input[type="password"]{
+    margin-left:1vw
+}
+form span{
+    display:inline-block;
+    width:47%;
+    padding-left:.5vw;
+    margin-bottom:.5vw;
+    font-size: 1vw;
+}
+
+.btn{
+    color:#0f25d8;
+    cursor:pointer;
+    background:white;
+    padding:.5vw 1vw;
+    display:inline-block;
+    width:auto;height:auto;
+    text-align:center;
+    font-weight:600;
+    border-radius:2px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    font-size: 1vw;
+}
+.btn:hover{
+    background:whitesmoke;
+}
+button,input{overflow:hidden}
+

@@ -1,0 +1,9 @@
+ <form (ngSubmit)="addUsuario()">
+  <input type="text" name="name" title='name' placeholder='Nombre' [(ngModel)]="usuario.name"/> 
+  <input type="text" name="userType" title ='user type' placeholder='Tipo' [(ngModel)]="usuario.userType"/> 
+  <input type="email" name="email" title ='email' placeholder='Correo' [(ngModel)]="usuario.email"/> 
+
+  <button type="submit" title='save'>
+      <i class="material-icons md-48">save</i>
+  </button>
+</form>

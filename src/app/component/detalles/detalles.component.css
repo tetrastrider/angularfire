@@ -1,0 +1,17 @@
+a{
+    cursor: pointer;
+    color: #fff;
+    background: #2c25d9;
+    padding: 1vw 3vw;
+    border-radius: .4vw;
+    font-weight: 600;
+    -webkit-transition:all .5s ease-in-out;-moz-transition:all .5s ease-in-out;
+    -ms-transition:all .5s ease-in-out;-o-transition:all .5s ease-in-out;
+    transition:all .5s ease-in-out;
+}
+
+a:hover{
+    background: #5652d8;
+    border-radius: 2vw;
+}
+.material-icons.md-48 { font-size: 48px; }

@@ -1,0 +1,31 @@
+<aside>
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="" [class.activated]="currentUrl == ''" title ='inicio' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <i class="material-icons">home</i> <p>dashboard</p>
+        </a>
+      </li>
+      <li>
+          <a routerLink="usuarios" [class.activated]="currentUrl == '/usuarios'" title = 'usuarios' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <i class="material-icons">supervised_user_circle</i> <p>usuarios</p>
+          </a>
+        </li>
+      <li>
+          <a routerLink="firebase" [class.activated]="currentUrl == '/firebase'" title = 'firebase' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <i class="material-icons">cloud_circle</i> <p>azul</p>
+          </a>
+        </li> 
+      <li>
+          <a routerLink="odoo" [class.activated]="currentUrl == '/odoo'" title = 'odoo' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <i class="material-icons">perm_media</i> <p>odoo</p>
+          </a>
+        </li>            
+      <li>
+          <a routerLink="configuracion" [class.activated]="currentUrl == '/configuracion'" title = 'configuracion' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <i class="material-icons">settings</i> <p>configurac&iacute;on</p>
+          </a>
+        </li>      
+    </ul>
+  </nav>
+</aside>
